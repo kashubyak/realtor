@@ -80,7 +80,7 @@ const Offers = () => {
 
   return (
     <div className="offer">
-      <h1 className="offer__title">Offers</h1>
+      <h1 className="offer__title">Пропозиції</h1>
       {loading ? (
         <div style={{ display: "flex", justifyContent: "center" }}>
           {" "}
@@ -111,7 +111,7 @@ const Offers = () => {
           )}
         </>
       ) : (
-        <p>There are no current offers</p>
+        <p>Актуальних пропозицій немає</p>
       )}
     </div>
   )

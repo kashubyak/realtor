@@ -48,22 +48,19 @@ export default function Profile() {
     setIsLoading(true)
     try {
       if (auth.currentUser.displayName !== name) {
-        // update display name in firebase auth
         await updateProfile(auth.currentUser, {
           displayName: name,
         })
-
-        // update name in firestore
 
         const docRef = doc(db, "users", auth.currentUser.uid)
         await updateDoc(docRef, {
           name: name,
         })
       }
-      toast.success("Profile details updated")
+      toast.success("Деталі профілю оновлено")
       setIsLoading(false)
     } catch (error) {
-      toast.error("Could not update the profile details")
+      toast.error("Не вдалося оновити дані профілю")
     }
   }
 
@@ -91,10 +88,10 @@ export default function Profile() {
 
   const confirmDelete = (listingId) => {
     Notiflix.Confirm.show(
-      "Delete Product!!!",
-      "You are about to delete this product",
-      "Delete",
-      "Cancel",
+      "Видалити товар!!!",
+      "Ви збираєтеся видалити цей продукт",
+      "Видалити",
+      "Скасувати",
       function okCb() {
         deleteListing(listingId)
       },
@@ -117,7 +114,7 @@ export default function Profile() {
       (listing) => listing.id !== listingId
     )
     setListings(updatedListings)
-    toast.success("Successfully deleted the listing")
+    toast.success("Список успішно видалено")
   }
 
   function onEdit(listingId) {
@@ -154,7 +151,7 @@ export default function Profile() {
 
             <div className="profile__form-links">
               <p className="profile__form-name-change-link">
-                Do you want to change your name?
+                  Ви хочете змінити своє ім'я?
                 <span
                   onClick={() => {
                     changeDetail && onSubmit()
@@ -163,23 +160,23 @@ export default function Profile() {
                   className="profile__form-name-change-link-name"
                 >
                   {!isLoading && changeDetail ? (
-                    "Apply change"
+                    "Застосувати зміни"
                   ) : isLoading ? (
                     <div className="loader--little"></div>
                   ) : (
-                    "Edit"
+                    "Редагувати"
                   )}
                 </span>
               </p>
               <p onClick={onLogout} className="profile__form-sign-out">
-                Sign out
+                Вийти
               </p>
             </div>
           </form>
           <button type="submit" className="profile__home-sell-btn">
             <Link to="/create-listing" className="profile__home-sell-btn-link">
               <FcHome className="profile__home-sell-btn-logo" />
-              Sell or rent your home
+              Продати або здати в оренду свій будинок
             </Link>
           </button>
         </div>

@@ -132,11 +132,11 @@ export default function Home() {
         {rentListings && rentListings.length > 0 && (
           <div className="home-page__listing-category-wrap">
             <h2 className="home-page__listing-category-title">
-              Places for rent
+              Місця для оренди
             </h2>
             <Link to="/category/rent">
               <p className="home-page__listing-category-link">
-                Show more places for rent
+                Показати більше місць для оренди
               </p>
             </Link>
             <ul className="home-page__listing-category-list">

@@ -8,7 +8,6 @@ import React, { useState } from "react"
 import { AiFillEye, AiFillEyeInvisible } from "react-icons/ai"
 import { Link, useNavigate } from "react-router-dom"
 import { toast } from "react-toastify"
-import { OAuth } from "../components/OAuth"
 import { db } from "../firebase"
 import "./SignIn.scss"
 
@@ -155,10 +154,6 @@ const SignUp = () => {
                 Sign up
               </button>
             )}
-            <div className="form-section__border-line">
-              <p>OR</p>
-            </div>
-            <OAuth />
           </form>
         </div>
       </div>

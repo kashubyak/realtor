@@ -2,7 +2,6 @@ import { getAuth, sendPasswordResetEmail } from "firebase/auth"
 import React, { useState } from "react"
 import { Link } from "react-router-dom"
 import { toast } from "react-toastify"
-import { OAuth } from "../components/OAuth"
 import "./SignIn.scss"
 
 const ForgotPassword = () => {
@@ -50,20 +49,16 @@ const ForgotPassword = () => {
 
             <div className="form-section__other-detail">
               <p className="form-section__account-signing">
-                Don't have a account?
-                <Link to="/sign-up">Register</Link>
+                Немає акаунту?
+                <Link to="/sign-up">Регістрація</Link>
               </p>
               <p className="form-section__forgot-password">
-                <Link to="/sign-in">Sign in instead</Link>
+                <Link to="/sign-in">Зайти</Link>
               </p>
             </div>
             <button className="form-section__btn-signing" type="submit">
               {isLoading ? "Sending Email..." : "Send reset Email"}
             </button>
-            <div className="form-section__border-line">
-              <p>OR</p>
-            </div>
-            <OAuth />
           </form>
         </div>
       </div>

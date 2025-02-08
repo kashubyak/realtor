@@ -6,7 +6,7 @@ import "./Header.scss"
 const Header = () => {
   const [pageState, setPageState] = useState({
     path: "sign-in",
-    menuName: "Sign in",
+    menuName: "Війти",
   })
   const { path, menuName } = pageState
 
@@ -16,12 +16,12 @@ const Header = () => {
       if (user) {
         setPageState({
           path: "profile",
-          menuName: "Profile",
+          menuName: "Профіль",
         })
       } else {
         setPageState({
           path: "sign-in",
-          menuName: "Sign in",
+          menuName: "Війти",
         })
       }
     })
@@ -39,11 +39,11 @@ const Header = () => {
         <nav>
           <ul className="header__menus">
             <NavLink to="/" className="header__menu">
-              Home
+              Домашня сторінка
             </NavLink>
 
             <NavLink to="/offers" className="header__menu">
-              Offers
+              Пропозиції
             </NavLink>
 
             <NavLink to={`/${path}`} className="header__menu">

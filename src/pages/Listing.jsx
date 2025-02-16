@@ -96,11 +96,7 @@ const Listing = () => {
       <div className="house-info">
         <div className="house-info__details">
           <p className="house-info__details-title">
-<<<<<<< HEAD
-            {listing.name} - ₹{" "}
-=======
             {listing.name} - ₴{" "}
->>>>>>> origin/master
             {listing.offer
               ? listing.discountedPrice
                 .toString()
@@ -120,11 +116,7 @@ const Listing = () => {
             </p>
             {listing.offer && (
               <p className="house-info__details-offer">
-<<<<<<< HEAD
-                ₹
-=======
                 ₴
->>>>>>> origin/master
                 {(+listing.regularPrice - +listing.discountedPrice)
                   .toString()
                   .replace(/\B(?=(?:(\d\d)+(\d)(?!\d))+(?!\d))/g, ",")}{" "}
@@ -138,31 +130,12 @@ const Listing = () => {
             {`${listing.timestamp.toDate().toDateString()}`}
           </p>
           <p className="house-info__details-description">
-<<<<<<< HEAD
-            <span style={{ fontWeight: 600 }}>Description - </span>
-=======
             <span style={{ fontWeight: 600 }}>Опис - </span>
->>>>>>> origin/master
             {listing.description}
           </p>
           <ul className="house-info__details-hbk">
             <li className="house-info__details-hbk-element">
               <FaBed className=" house-info__details-hbk-element-icon" />
-<<<<<<< HEAD
-              {+listing.bedrooms > 1 ? `${listing.bedrooms} Beds` : "1 Bed"}
-            </li>
-            <li className="house-info__details-hbk-element">
-              <FaBath className="house-info__details-hbk-element-icon" />
-              {+listing.bathrooms > 1 ? `${listing.bathrooms} Baths` : "1 Bath"}
-            </li>
-            <li className="house-info__details-hbk-element">
-              <FaParking className="house-info__details-hbk-element-icon" />
-              {listing.parking ? "Parking spot" : "No parking"}
-            </li>
-            <li className="house-info__details-hbk-element">
-              <FaChair className="house-info__details-hbk-element-icon" />
-              {listing.furnished ? "Furnished" : "Not furnished"}
-=======
               {+listing.bedrooms > 1 ? `${listing.bedrooms} Ліжка` : "1 Ліжко"}
             </li>
             <li className="house-info__details-hbk-element">
@@ -176,7 +149,6 @@ const Listing = () => {
             <li className="house-info__details-hbk-element">
               <FaChair className="house-info__details-hbk-element-icon" />
               {listing.furnished ? "Меблі" : "Без меблів"}
->>>>>>> origin/master
             </li>
           </ul>
           {listing.userRef !== auth.currentUser?.uid && !contactLandlord && (
@@ -188,11 +160,7 @@ const Listing = () => {
                 onClick={() => setContactLandlord(true)}
                 className="house-info__details-contact-landlord-btn"
               >
-<<<<<<< HEAD
-                Contact Landlord
-=======
                 Зв'язатися з орендодавцем
->>>>>>> origin/master
               </button>
             </div>
           )}

@@ -96,22 +96,14 @@ const SignUp = () => {
               id="name"
               value={name}
               onChange={onChange}
-<<<<<<< HEAD
-              placeholder="Full name"
-=======
               placeholder="Ім'я"
->>>>>>> origin/master
               className={`form-section__form-input`}
             />
 
             <input
               type="text"
               id="email"
-<<<<<<< HEAD
-              placeholder="Email address"
-=======
               placeholder="Електронна Пошта"
->>>>>>> origin/master
               className={`form-section__form-input`}
               value={email}
               onChange={onChange}
@@ -121,11 +113,7 @@ const SignUp = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
-<<<<<<< HEAD
-                placeholder="Password"
-=======
                 placeholder="Пароль"
->>>>>>> origin/master
                 className={`form-section__form-input`}
                 onChange={onChange}
                 value={password}
@@ -144,19 +132,11 @@ const SignUp = () => {
             </div>
             <div className="form-section__other-detail">
               <p className="form-section__account-signing">
-<<<<<<< HEAD
-                Don't have a account?
-                <Link to="/sign-in">Sign in</Link>
-              </p>
-              <p className="form-section__forgot-password">
-                <Link to="/forgot-password">Forgot password?</Link>
-=======
                 Немаєте аккаунту?
                 <Link to="/sign-in">Увійти</Link>
               </p>
               <p className="form-section__forgot-password">
                 <Link to="/forgot-password">Забули пароль?</Link>
->>>>>>> origin/master
               </p>
             </div>
 
@@ -167,19 +147,11 @@ const SignUp = () => {
                 type="submit"
                 style={{ cursor: "default", backgroundColor: "#86a1da" }}
               >
-<<<<<<< HEAD
-                Signing In...
-              </button>
-            ) : (
-              <button className="form-section__btn-signing" type="submit">
-                Sign up
-=======
                 Вхід...
               </button>
             ) : (
               <button className="form-section__btn-signing" type="submit">
                 Увійти
->>>>>>> origin/master
               </button>
             )}
           </form>

@@ -110,11 +110,7 @@ export default function EditListing() {
     setLoading(true)
     if (+discountedPrice >= +regularPrice) {
       setLoading(false)
-<<<<<<< HEAD
-      toast.error("Discounted price needs to be less than regular price")
-=======
       toast.error("Ціна зі знижкою має бути нижчою за звичайну")
->>>>>>> origin/master
       return
     }
 
@@ -205,11 +201,7 @@ export default function EditListing() {
     <main className="create-listing">
       <h1 className="create-listing__heading">Edit Listing</h1>
       <form onSubmit={onSubmit} className="create-listing__form">
-<<<<<<< HEAD
-        <p className="create-listing__form-sub-heading">Sell / Rent</p>
-=======
         <p className="create-listing__form-sub-heading">Продаж / Оренда</p>
->>>>>>> origin/master
         <div className="create-listing__form-toggle-btn-wrap">
           <button
             type="button"
@@ -217,15 +209,11 @@ export default function EditListing() {
             value="sale"
             onClick={onChange}
             className={`create-listing__form-toggle-btn ${type === "rent"
-                ? "create-listing__form-toggle-btn--white"
-                : "create-listing__form-toggle-btn--black"
+              ? "create-listing__form-toggle-btn--white"
+              : "create-listing__form-toggle-btn--black"
               }`}
           >
-<<<<<<< HEAD
-            sell
-=======
             Продаж
->>>>>>> origin/master
           </button>
           <button
             type="button"
@@ -233,21 +221,14 @@ export default function EditListing() {
             value="rent"
             onClick={onChange}
             className={`create-listing__form-toggle-btn ${type === "sale"
-                ? "create-listing__form-toggle-btn--white"
-                : "create-listing__form-toggle-btn--black"
+              ? "create-listing__form-toggle-btn--white"
+              : "create-listing__form-toggle-btn--black"
               }`}
           >
-<<<<<<< HEAD
-            rent
-          </button>
-        </div>
-        <p className="create-listing__form-sub-heading">Name</p>
-=======
             Оренда
           </button>
         </div>
         <p className="create-listing__form-sub-heading">Ім'я</p>
->>>>>>> origin/master
         <input
           type="text"
           id="name"
@@ -261,11 +242,7 @@ export default function EditListing() {
         />
         <div className="create-listing__form-small-input-wrap">
           <div>
-<<<<<<< HEAD
-            <p className="create-listing__form-sub-heading">Beds</p>
-=======
             <p className="create-listing__form-sub-heading">Ліжка</p>
->>>>>>> origin/master
             <input
               type="number"
               id="bedrooms"
@@ -278,11 +255,7 @@ export default function EditListing() {
             />
           </div>
           <div>
-<<<<<<< HEAD
-            <p className="create-listing__form-sub-heading">Baths</p>
-=======
             <p className="create-listing__form-sub-heading">Ванни</p>
->>>>>>> origin/master
             <input
               type="number"
               id="bathrooms"
@@ -295,11 +268,7 @@ export default function EditListing() {
             />
           </div>
         </div>
-<<<<<<< HEAD
-        <p className=" create-listing__form-sub-heading">Parking spot</p>
-=======
         <p className=" create-listing__form-sub-heading">Парковка</p>
->>>>>>> origin/master
         <div className="create-listing__form-toggle-btn-wrap">
           <button
             type="button"
@@ -307,37 +276,26 @@ export default function EditListing() {
             value={true}
             onClick={onChange}
             className={`create-listing__form-toggle-btn ${!parking
-                ? "create-listing__form-toggle-btn--white"
-                : "create-listing__form-toggle-btn--black"
+              ? "create-listing__form-toggle-btn--white"
+              : "create-listing__form-toggle-btn--black"
               }`}
           >
-<<<<<<< HEAD
-            Yes
-=======
             ТАК
->>>>>>> origin/master
-          </button>
+          </button >
           <button
             type="button"
             id="parking"
             value={false}
             onClick={onChange}
             className={`create-listing__form-toggle-btn ${parking
-                ? "create-listing__form-toggle-btn--white"
-                : "create-listing__form-toggle-btn--black"
+              ? "create-listing__form-toggle-btn--white"
+              : "create-listing__form-toggle-btn--black"
               }`}
           >
-<<<<<<< HEAD
-            no
-          </button>
-        </div>
-        <p className=" create-listing__form-sub-heading">Furnished</p>
-=======
             НІ
           </button>
         </div>
         <p className=" create-listing__form-sub-heading">Меблі</p>
->>>>>>> origin/master
         <div className="create-listing__form-toggle-btn-wrap">
           <button
             type="button"
@@ -345,115 +303,82 @@ export default function EditListing() {
             value={true}
             onClick={onChange}
             className={`create-listing__form-toggle-btn ${!furnished
-                ? "create-listing__form-toggle-btn--white"
-                : "create-listing__form-toggle-btn--black"
+              ? "create-listing__form-toggle-btn--white"
+              : "create-listing__form-toggle-btn--black"
               }`}
           >
-<<<<<<< HEAD
-            yes
-=======
             ТАК
->>>>>>> origin/master
-          </button>
+          </button >
           <button
             type="button"
             id="furnished"
             value={false}
             onClick={onChange}
             className={`create-listing__form-toggle-btn ${furnished
-                ? "create-listing__form-toggle-btn--white"
-                : "create-listing__form-toggle-btn--black"
+              ? "create-listing__form-toggle-btn--white"
+              : "create-listing__form-toggle-btn--black"
               }`}
           >
-<<<<<<< HEAD
-            no
-          </button>
-        </div>
-        <p className="create-listing__form-sub-heading">Address</p>
-=======
             НІ
           </button>
         </div>
         <p className="create-listing__form-sub-heading">Адреса</p>
->>>>>>> origin/master
         <textarea
           type="text"
           id="address"
           value={address}
           onChange={onChange}
-<<<<<<< HEAD
-          placeholder="Address"
-=======
           placeholder="Адрес"
->>>>>>> origin/master
           required
           className="create-listing__form-input"
         />
-        {!geolocationEnabled && (
-          <div className="create-listing__form-rent">
-            <div className="">
-<<<<<<< HEAD
-              <p className="create-listing__form-sub-heading">Latitude</p>
-=======
-              <p className="create-listing__form-sub-heading">Широта</p>
->>>>>>> origin/master
-              <input
-                type="number"
-                id="latitude"
-                value={latitude}
-                onChange={onChange}
-                required
-                min="-90"
-                max="90"
-                step="any"
-                className="create-listing__form-input"
-                placeholder="Ex: 13.095631"
-              />
-            </div>
-            <div className="" style={{ marginLeft: "1.4rem" }}>
-<<<<<<< HEAD
-              <p className="create-listing__form-sub-heading">Longitude</p>
-=======
-              <p className="create-listing__form-sub-heading">Довгота</p>
->>>>>>> origin/master
-              <input
-                type="number"
-                id="longitude"
-                value={longitude}
-                onChange={onChange}
-                required
-                min="-180"
-                max="180"
-                step="any"
-                className="create-listing__form-input"
-                placeholder="Ex: 80.207620"
-              />
-            </div>
-          </div>
-        )}
-<<<<<<< HEAD
-        <p className="create-listing__form-sub-heading">Description</p>
-=======
+        {
+          !geolocationEnabled && (
+            <div className="create-listing__form-rent">
+              <div className="">
+                <p className="create-listing__form-sub-heading">Широта</p>
+                <input
+                  type="number"
+                  id="latitude"
+                  value={latitude}
+                  onChange={onChange}
+                  required
+                  min="-90"
+                  max="90"
+                  step="any"
+                  className="create-listing__form-input"
+                  placeholder="Ex: 13.095631"
+                />
+              </div >
+              <div className="" style={{ marginLeft: "1.4rem" }}>
+                <p className="create-listing__form-sub-heading">Довгота</p>
+                <input
+                  type="number"
+                  id="longitude"
+                  value={longitude}
+                  onChange={onChange}
+                  required
+                  min="-180"
+                  max="180"
+                  step="any"
+                  className="create-listing__form-input"
+                  placeholder="Ex: 80.207620"
+                />
+              </div >
+            </div >
+          )
+        }
         <p className="create-listing__form-sub-heading">Опис</p>
->>>>>>> origin/master
         <textarea
           type="text"
           id="description"
           value={description}
           onChange={onChange}
-<<<<<<< HEAD
-          placeholder="Description"
-          required
-          className="create-listing__form-input"
-        />
-        <p className="create-listing__form-sub-heading">Offer</p>
-=======
           placeholder="Опис"
           required
           className="create-listing__form-input"
         />
         <p className="create-listing__form-sub-heading">Пропозиція</p>
->>>>>>> origin/master
         <div className="create-listing__form-toggle-btn-wrap">
           <button
             type="button"
@@ -461,40 +386,28 @@ export default function EditListing() {
             value={true}
             onClick={onChange}
             className={`create-listing__form-toggle-btn ${!offer
-                ? "create-listing__form-toggle-btn--white"
-                : "create-listing__form-toggle-btn--black"
+              ? "create-listing__form-toggle-btn--white"
+              : "create-listing__form-toggle-btn--black"
               }`}
           >
-<<<<<<< HEAD
-            yes
-=======
             ТАК
->>>>>>> origin/master
-          </button>
+          </button >
           <button
             type="button"
             id="offer"
             value={false}
             onClick={onChange}
             className={`create-listing__form-toggle-btn ${offer
-                ? "create-listing__form-toggle-btn--white"
-                : "create-listing__form-toggle-btn--black"
+              ? "create-listing__form-toggle-btn--white"
+              : "create-listing__form-toggle-btn--black"
               }`}
           >
-<<<<<<< HEAD
-            no
-=======
             НІ
->>>>>>> origin/master
-          </button>
-        </div>
+          </button >
+        </div >
         <div className="create-listing__form-rent">
           <div className="">
-<<<<<<< HEAD
-            <p className="create-listing__form-sub-heading">Regular price</p>
-=======
             <p className="create-listing__form-sub-heading">Звичайна ціна</p>
->>>>>>> origin/master
             <div className="create-listing__form-toggle-rent-btn-wrap">
               <input
                 type="number"
@@ -519,27 +432,20 @@ export default function EditListing() {
                     className="create-listing__form-rent-month"
                     style={{ width: "100px", fontSize: "1.2rem" }}
                   >
-<<<<<<< HEAD
-                    ₹ / Month
-=======
                     ₴ / Місяць
->>>>>>> origin/master
-                  </p>
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
+                  </p >
+                </div >
+              )
+              }
+            </div >
+          </div >
+        </div >
         {offer && (
           <div className="create-listing__form-rent">
             <div className="">
               <p className="create-listing__form-sub-heading">
-<<<<<<< HEAD
-                Discounted price
-=======
-              Ціна зі знижкою
->>>>>>> origin/master
-              </p>
+                Ціна зі знижкою
+              </p >
               <div className="create-listing__form-toggle-rent-btn-wrap">
                 <input
                   type="number"
@@ -564,17 +470,13 @@ export default function EditListing() {
                       className="create-listing__form-rent-month"
                       style={{ width: "100px", fontSize: "1.2rem" }}
                     >
-<<<<<<< HEAD
-                      ₹ / Month
-=======
                       ₴ / Місяць
->>>>>>> origin/master
-                    </p>
-                  </div>
+                    </p >
+                  </div >
                 )}
-              </div>
-            </div>
-          </div>
+              </div >
+            </div >
+          </div >
         )}
         <div style={{ marginBottom: "3rem" }}>
           <p className="create-listing__form-sub-heading">Images</p>
@@ -600,13 +502,9 @@ export default function EditListing() {
           />
         </div>
         <button type="submit" className="create-listing__btn-signing">
-<<<<<<< HEAD
-          Edit Listing
-=======
           Редагувати список
->>>>>>> origin/master
-        </button>
-      </form>
-    </main>
+        </button >
+      </form >
+    </main >
   )
 }

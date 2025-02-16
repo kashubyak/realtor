@@ -69,7 +69,7 @@ export default function Slider() {
               ></div>
               <p className="house-name">{data.name}</p>
               <p className="house-price">
-                ₹ {data.discountedPrice ?? data.regularPrice}
+                ₴ {data.discountedPrice ?? data.regularPrice}
                 {data.type === "rent" && " / month"}
               </p>
             </SwiperSlide>

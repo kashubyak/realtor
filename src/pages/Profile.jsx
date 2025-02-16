@@ -185,7 +185,11 @@ export default function Profile() {
         {listIsLoading && <div className="loader"></div>}
         {!listIsLoading && listings.length > 0 && (
           <>
+<<<<<<< HEAD
             <h2 className="user-listings-section__header">My Listings</h2>
+=======
+            <h2 className="user-listings-section__header">Мої оголошення</h2>
+>>>>>>> origin/master
             <ul className="user-listings-section__listing">
               {listings.map((listing) => (
                 <ListingItem

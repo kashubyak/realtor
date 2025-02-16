@@ -21,7 +21,7 @@ const Header = () => {
       } else {
         setPageState({
           path: "sign-in",
-          menuName: "Війти",
+          menuName: "Увійти",
         })
       }
     })

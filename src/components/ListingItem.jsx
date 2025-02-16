@@ -27,7 +27,7 @@ export default function ListingItem({ listing, id, onEdit, onDelete }) {
           </div>
           <p className="listingItem__name">{listing.name}</p>
           <p className="listingItem__price">
-            ₹
+            ₴
             {listing.offer
               ? listing.discountedPrice
                 .toString()
@@ -40,32 +40,35 @@ export default function ListingItem({ listing, id, onEdit, onDelete }) {
           <div className="listingItem__wrap listingItem__wrap--increase-margin">
             <div className="listingItem__wrap">
               <p className="listingItem__bath-and-bed">
-                {listing.bedrooms > 1 ? `${listing.bedrooms} Beds` : "1 Bed"}
-              </p>
-            </div>
+                {listing.bedrooms > 1 ? `${listing.bedrooms} Ліжка` : "1 Ліжко"}
+              </p >
+            </div >
             <div className="listingItem__wrap">
               <p className=" listingItem__bath-and-bed">
                 {listing.bathrooms > 1
-                  ? `${listing.bathrooms} Baths`
-                  : "1 Bath"}
+                  ? `${listing.bathrooms} Ванни`
+                  : "1 Ванна"}
               </p>
             </div>
-          </div>
-        </div>
-      </Link>
+          </div >
+        </div >
+      </Link >
       {onDelete && (
         <FaTrash
           className="listingItem__manipulate-icon"
           onClick={() => onDelete(listing.id)}
         />
-      )}
-      {onEdit && (
-        <MdEdit
-          className="listingItem__manipulate-icon"
-          style={{ right: "1.75rem", color: "darkBlue" }}
-          onClick={() => onEdit(listing.id)}
-        />
-      )}
-    </li>
+      )
+      }
+      {
+        onEdit && (
+          <MdEdit
+            className="listingItem__manipulate-icon"
+            style={{ right: "1.75rem", color: "darkBlue" }}
+            onClick={() => onEdit(listing.id)}
+          />
+        )
+      }
+    </li >
   )
 }

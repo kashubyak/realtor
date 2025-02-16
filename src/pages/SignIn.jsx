@@ -42,7 +42,11 @@ const SignIn = () => {
 
   return (
     <section className="form-section">
+<<<<<<< HEAD
       <h1 className=" form-section__title">Sign In</h1>
+=======
+      <h1 className=" form-section__title">Увійти</h1>
+>>>>>>> origin/master
       <div className=" form-section__form-wrapper">
         <div className="form-section__image-wrap">
           <img
@@ -55,7 +59,11 @@ const SignIn = () => {
             <input
               type="email"
               id="email"
+<<<<<<< HEAD
               placeholder="Email address"
+=======
+              placeholder="Електронна Пошта"
+>>>>>>> origin/master
               className="form-section__form-input"
               value={email}
               onChange={onChange}
@@ -64,7 +72,11 @@ const SignIn = () => {
               <input
                 type={showPassword ? "text" : "password"}
                 id="password"
+<<<<<<< HEAD
                 placeholder="Password"
+=======
+                placeholder="Пароль"
+>>>>>>> origin/master
                 className="form-section__form-input-password"
                 onChange={onChange}
                 value={password}
@@ -83,11 +95,19 @@ const SignIn = () => {
             </div>
             <div className="form-section__other-detail">
               <p className="form-section__account-signing">
+<<<<<<< HEAD
                 Don't have a account?
                 <Link to="/sign-up">Register</Link>
               </p>
               <p className="form-section__forgot-password">
                 <Link to="/forgot-password">Forgot password?</Link>
+=======
+                Немаєте аккаунту?
+                <Link to="/sign-up">Зареєструватися</Link>
+              </p>
+              <p className="form-section__forgot-password">
+                <Link to="/forgot-password">Забули пароль?</Link>
+>>>>>>> origin/master
               </p>
             </div>
             {isLoading ? (
@@ -97,11 +117,19 @@ const SignIn = () => {
                 type="submit"
                 style={{ cursor: "default", backgroundColor: "#86a1da" }}
               >
+<<<<<<< HEAD
                 Signing In...
               </button>
             ) : (
               <button className="form-section__btn-signing" type="submit">
                 Sign In
+=======
+                Вхід...
+              </button>
+            ) : (
+              <button className="form-section__btn-signing" type="submit">
+                Увійти
+>>>>>>> origin/master
               </button>
             )}
           </form>

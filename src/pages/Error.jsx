@@ -13,6 +13,7 @@ const ErrorPage = () => {
           style={{ marginTop: "20px", marginBottom: "10px" }}
         />
       </Link>
+<<<<<<< HEAD
       <h2 className="error__title">Looking for something?</h2>
       <p className="error__para">
         We're sorry. The Web address you entered is not a functioning page on
@@ -20,6 +21,13 @@ const ErrorPage = () => {
       </p>
       <h2 className="error__guide">
         ▶ Go to Realtor's <Link to="/">Home</Link> Page
+=======
+      <h2 className="error__title">Шукаєте щось?</h2>
+      <p className="error__para">
+      Вибачте Веб-адреса, яку ви ввели, не є робочою сторінкою на нашому сайті.</p>
+      <h2 className="error__guide">
+        ▶ Перейти до ріелторів <Link to="/">Home</Link> Page
+>>>>>>> origin/master
       </h2>
     </div>
   )

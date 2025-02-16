@@ -112,10 +112,17 @@ export default function Home() {
       <div className="home-page__listing">
         {offerListings && offerListings.length > 0 && (
           <div className="home-page__listing-category-wrap">
+<<<<<<< HEAD
             <h2 className="home-page__listing-category-title">Recent offers</h2>
             <Link to="/offers">
               <p className="home-page__listing-category-link">
                 Show more offers
+=======
+            <h2 className="home-page__listing-category-title">Останні пропозиції</h2>
+            <Link to="/offers">
+              <p className="home-page__listing-category-link">
+                Показати більше пропозицій
+>>>>>>> origin/master
               </p>
             </Link>
             <ul className="home-page__listing-category-list">
@@ -153,11 +160,19 @@ export default function Home() {
         {saleListings && saleListings.length > 0 && (
           <div className="home-page__listing-category-wrap">
             <h2 className="home-page__listing-category-title">
+<<<<<<< HEAD
               Places for sale
             </h2>
             <Link to="/category/sale">
               <p className="home-page__listing-category-link">
                 Show more places for sale
+=======
+            Місця для продажу
+            </h2>
+            <Link to="/category/sale">
+              <p className="home-page__listing-category-link">
+              Показати більше місць для продажу
+>>>>>>> origin/master
               </p>
             </Link>
             <ul className="home-page__listing-category-list">

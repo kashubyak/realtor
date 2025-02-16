@@ -83,7 +83,7 @@ const Category = () => {
   return (
     <div className="offer">
       <h1 className="offer__title">
-        {params.categoryName === "rent" ? "Places for rent" : "Places for sale"}
+        {params.categoryName === "rent" ? "Оренда місць" : "Місця для продажу"}
       </h1>
       {loading ? (
         <div style={{ display: "flex", justifyContent: "center" }}>
@@ -109,20 +109,20 @@ const Category = () => {
                 onClick={onFetchMoreListings}
                 className="offer__load-more-btn"
               >
-                Load more
-              </button>
-            </div>
+                Завантажити більше
+              </button >
+            </div >
           )}
         </>
       ) : (
         <p>
           There are no current{" "}
           {params.categoryName === "rent"
-            ? "Places for rent"
-            : "Places for sale"}
+            ? "Оренда місць"
+            : "Місця для продажу"}
         </p>
       )}
-    </div>
+    </div >
   )
 }
 
